@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>硅革科技-联系我们</title>
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+    <div class="header f-oh">
+        <div class="inner">
+            <div class="left">
+                <a href="index.html"><img src="images/logo.png" width="200px" height="60px;"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="lianxiwm f-oh">
+        <div class="inner">
+            <h1>网站正在更新中...</h1>
+            <h1>更新进度，请加群询问...</h1>
+    </div>
+
+    <div class="contact f-oh">
+        <div class="inner">
+            <div class="contact-logo">
+                <img src="images/logo2.png">
+            </div>
+            <div class="contact-right">
+                <div class="weixin_nr">
+                    <img src="images/2wm.png" style="display:none" id="weixin_nr">
+                </div>
+
+                <div class="contact-nav" id="wx">
+                    <img src="images/wx.png">
+                    <p><a href="#">微信：ROGAN</a></p>
+                </div>
+
+                <div class="weixin_nr">
+                    <img src="images/2qq.png" style="display:none" id="qq_nr">
+                </div>
+
+                <div class="contact-nav" id="qq" style="width:170px;">
+                    <img src="images/qq.png">
+                    <p><a href="#">QQ群：538472514</a></p>
+                </div>
+
+                <!--
+                <div class="contact-nav" style="width:200px;">
+                    <img src="images/dh.png">
+                    <P>电话：to be contine</P>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+
+    <div class="footer f-oh">
+        <div class="copyrights">
+            Copyright©2020-2050&nbsp;&nbsp;Tiny CNC&nbsp;&nbsp;版权所有&nbsp;&nbsp;京ICP备13001395号
+        </div>
+    </div>
+    <script language="javascript">
+        document.getElementById("wx").onmouseout = function () {//当鼠标滑出
+            document.getElementById("weixin_nr").style.display = "none";	//改变weixin_nr的display属性
+        }
+        document.getElementById("wx").onmouseover = function () {  //当鼠标经过
+            document.getElementById("weixin_nr").style.display = "block";
+        }
+        document.getElementById("qq").onmouseout = function () {//当鼠标滑出
+            document.getElementById("qq_nr").style.display = "none";	//改变weixin_nr的display属性
+        }
+        document.getElementById("qq").onmouseover = function () {  //当鼠标经过
+            document.getElementById("qq_nr").style.display = "block";
+        }
+    </script>
+</body>
+</html>
