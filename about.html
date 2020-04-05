@@ -10,40 +10,9 @@
     <script type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
 </head>
 <body>
-    <div class="header f-oh">
-        <div class="inner">
-            <div class="left">
-                <a href="index.html"><img src="images/logo.png" width="200px" height="60px;"></a>
-            </div>
-            <div class="right">
-                <ul>
-                    <a href="index.html">
-                        <li>首页</li>
-                    </a>
-                    <a href="blank.html">
-                        <li>机械结构</li>
-                    </a>
-                    <a href="blank.html">
-                        <li>数控原理</li>
-                    </a>
-                    <a href="blank.html">
-                        <li>设计软件</li>
-                    </a>
-                    <a href="blank.html">
-                        <li>木材抛光</li>
-                    </a>
-                    <a href="blank.html">
-                        <li>案例分享</li>
-                    </a>
-                    <a href="#">
-                        <li class="active" style="color:#313131">关于我们</li>
-                    </a>
-                </ul>
+    <!--页眉-->
+    <iframe src="_header.html" width="100%" height="85" scrolling="No" frameborder="0" id="header"></iframe>
 
-            </div>
-        </div>
-
-    </div>
     <div class="title about01 f-oh">
         <div class="inner-top">
             <div class="logo">
@@ -150,101 +119,9 @@
 
     </div>
 
-    <!--
-    <div class="lianxi f-oh">
-        <div class="inner">
-            <h1>联系我们</h1>
-            <div class="lianxi-left">
-                <img src="images/ditu.png">
-                <p>地址：北京市海淀区北清路156号中关村环保科技示范园计算所2F</p>
-            </div>
-            <div class="lianxi-right">
-                <div class="lianxi-right-kuai">
-                    <div class="lianxi-right-kuai-left">
-                        <img src="images/lx01.png"></div>
-                    <div class="lianxi-right-kuai-right">
-                        <h3>招聘邮箱</h3>
-                        <p>hr@guigekeji.com</p>
-                    </div>
-
-                </div>
-                <div class="lianxi-right-kuai">
-                    <div class="lianxi-right-kuai-left">
-                        <img src="images/lx02.png"></div>
-                    <div class="lianxi-right-kuai-right">
-                        <h3>商务合作</h3>
-                        <p>yanguang@guigekeji.com</p>
-                    </div>
-
-                </div>
-                <div class="lianxi-right-kuai">
-                    <div class="lianxi-right-kuai-left">
-                        <img src="images/lx03.png"></div>
-                    <div class="lianxi-right-kuai-right">
-                        <h3>客服电话</h3>
-                        <p>010-56257299</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-    -->
-    <div class="contact f-oh">
-        <div class="inner">
-            <div class="contact-logo">
-                <img src="images/logo2.png">
-            </div>
-            <div class="contact-right">
-                <div class="weixin_nr">
-                    <img src="images/2wm.png" style="display:none" id="weixin_nr">
-                </div>
-
-                <div class="contact-nav" id="wx">
-                    <img src="images/wx.png">
-                    <p><a href="#">微信：ROGAN</a></p>
-                </div>
-
-                <div class="weixin_nr">
-                    <img src="images/2qq.png" style="display:none" id="qq_nr">
-                </div>
-
-                <div class="contact-nav" id="qq" style="width:170px;">
-                    <img src="images/qq.png">
-                    <p><a href="#">QQ群：538472514</a></p>
-                </div>
-
-                <!--
-                <div class="contact-nav" style="width:200px;">
-                    <img src="images/dh.png">
-                    <P>电话：to be contine</P>
-                </div>
-                -->
-            </div>
-        </div>
-    </div>
-
-    <div class="footer f-oh">
-        <div class="copyrights">
-            Copyright©2020-2050&nbsp;&nbsp;Tiny CNC&nbsp;&nbsp;版权所有&nbsp;&nbsp;京ICP备13001395号
-        </div>
-    </div>
-    <script language="javascript">
-        document.getElementById("wx").onmouseout = function () {//当鼠标滑出
-            document.getElementById("weixin_nr").style.display = "none";	//改变weixin_nr的display属性
-        }
-        document.getElementById("wx").onmouseover = function () {  //当鼠标经过
-            document.getElementById("weixin_nr").style.display = "block";
-        }
-        document.getElementById("qq").onmouseout = function () {//当鼠标滑出
-            document.getElementById("qq_nr").style.display = "none";	//改变weixin_nr的display属性
-        }
-        document.getElementById("qq").onmouseover = function () {  //当鼠标经过
-            document.getElementById("qq_nr").style.display = "block";
-        }
-    </script>
+    <!--返回顶部-->
+    <script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+    <!--页脚-->
+    <iframe src="_footer.html" width="100%" height="100%" scrolling="No" frameborder="0" id="footer"></iframe>
 </body>
 </html>
