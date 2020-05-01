@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TinyCNC-在线教程</title>
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+    <!--页眉-->
+    <iframe src="header.html" width="100%" height="85" scrolling="No" frameborder="0" id="header"></iframe>
+
+    <!--
+        <div class="jcdh f-oh">
+            <div class="inner">
+                <div class="jcnav help-center-ul">
+                    <ul>
+                        <li class="jcli jcdq">
+                            <a href="jiaocheng.html">豹影帮助</a>
+                        </li>
+                        <li class="jcli-ipad jclast">
+                            <a href="ipadjiaocheng.html">运动分析大师帮助</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="jcnav jcnr-ul">
+                    <ul>
+                        <li class="jcli">
+                            <a href="shipinku_nr_01.html">视频库</a>
+                        </li>
+                        <li class="jcli">
+                            <a href="bofangqi_nr_01.html">播放器</a>
+                        </li>
+                        <li class="jcli jcdq">
+                            <a href="shexiang_nr_01.html">摄像</a>
+                        </li>
+                        <li class="jcli">
+                            <a href="fenxiqi_nr_01.html">分析器</a>
+                        </li>
+                        <li class="jcli">
+                            <a href="xianchangfenxi_nr_01.html">现场分析</a>
+                        </li>
+                        <li class="jcli">
+                            <a href="diejiaduibi_nr_01.html">叠加对比</a>
+                        </li>
+                        <li class="jcli jclast">
+                            <a href="dongzuofenjie_nr_01.html">动作分解</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    -->
+
+    <div class="jcnr f-oh">
+        <div class="inner">
+            <div class="jcnrkuai">
+                <!--左边教程内容块-->
+                <div class="jcnr-left">
+                    <h3>电控原理</h3> <!--教程标题-->
+                    <div class="buzhou" id="t0">
+                        <div class="xuhao">0</div>
+                        <p>演示视频</p>
+                        <div style="float:left">
+                            <p><a href=""><img src="images/controltheory/video.png" width="640"/></a></p>
+                        </div>
+                    </div>
+
+                    <div class="buzhou" id="t1">
+                        <!--步骤一-->
+                        <div class="xuhao">1</div>
+                        <p>步进原理</p>
+                        <div style="float:left">
+                            <p>步进电机是整个数控系统的基石，只有理解它，才能完全明白你的机器是如何运行的，</p>
+                            <p><img src="images/controltheory/image1.png" width="640" /></p>
+                            <p>常见的 42 步进电机，有 4 根接线A+A-B+B-。实际上每一对接线对应一个通电线圈，如下所示：</p>
+                            <p><img src="images/controltheory/image2.jpeg" width="640" /></p>
+                            <p>我们知道，通电的线圈相当于一块吸铁石。</p>
+                            <p><img src="images/controltheory/image3.png" width="640" /></p>
+                            <p>在步进电机的内部，排列着一对对的磁铁。如下图所示：</p>
+                            <p><img src="images/controltheory/image4.png" width="640" /></p>
+                            <p>1、当A线圈通电时，产生一个电磁铁A，电机旋转到A位置。</p>
+                            <p>2、断开A线圈，电磁铁A消失。同时接通B线圈，产生电磁铁B。</p>
+                            <p>3、由于惯性，电机旋转到B位置。</p>
+                            <p>4、不断通断AB线圈的电流，就能让电机旋转到指定的位置。</p>
+                            <p>-</p>
+                            <p>下面我们通过电池和开关，来模拟这个现象：</p>
+                            <p>A线圈接通</p>
+                            <p><img src="images/controltheory/image5.png" width="640" /></p>
+                            <p>B线圈接通</p>
+                            <p><img src="images/controltheory/image6.png" width="640" /></p>
+                            <p>通过开关电源，控制步进电机运动：</p>
+                            <p><img src="images/controltheory/image7.gif" width="640" /></p>
+                        </div>
+                    </div>
+
+                    <div class="buzhou" id="t2">
+                        <div class="xuhao">2</div>
+                        <p>步进电机驱动器</p>
+                        <div style="float:left">
+                            <p>通过机械的方式，需要4个电源和开关，来切换线圈电流的方向。不仅设备复杂，而且操作麻烦，于是人们发明了步进电机驱动器。它内部使用电子开关，来替代4个机械开关和电源，这样就可以使用1个电源+1个开关来驱动步进电机了。</p>
+                            <p>-</p>
+                            <p>下图是雷塞M420D的步进电机驱动器：</p>
+                            <p><img src="images/controltheory/image8.png" width="640" /></p>
+                            <p>1、绿框显示动力电源的接线，接入24V直流电源，输出24V控制步进电机转动。。</p>
+                            <p>2、红框显示了控制信号的接线。例如，在时间T=0到1毫秒时，给1个5V的电压；在T=1到2毫秒时，不给电压。驱动器接受到4个这样的信号，就通过电子开关，开关A+A-B+B-电源各一次，输出给步进电机，于是步进电机就转动4个步。</p>
+                            <p>3、速度控制：上例，2毫秒开关一次电源，每秒就开关了500次，电机的旋转速度就是2.5圈/秒。如果想让电机转动的快点，就加快电源开关的速度，例如1毫秒开关一次，就能让电机的旋转速度提高到5圈/秒。</p>
+                            <p>4、方向控制：同样，利用5V信号，也可以控制电机的正反转。</p>
+                            <p>-</p>
+                            <p>下面，我们通过一个开关来驱动步进电机，开关每闭合一次，前进一个步进角。</p>
+                            <p><img src="images/controltheory/image9.png" width="640" /></p>
+                            <p>开关按下，走了一步。</p>
+                            <p><img src="images/controltheory/image10.png" width="640" /></p>
+                            <p>开关电路的电压变换图：。</p>
+                            <p><img src="images/controltheory/image11.png" width="640" /></p>
+                            <p>使用开关控制步进电机驱动器：</p>
+                            <p><img src="images/controltheory/step2.gif" width="640" /></p>
+                        </div>
+                    </div>
+
+                    <div class="buzhou" id="t3">
+                        <div class="xuhao">3</div>
+                        <p>电子开关</p>
+                        <div style="float:left">
+                            <p>每一次开关电源，步进电机旋转1.8步，旋转一圈需要开关200次。在实际使用中，步进电机每秒旋转5圈，就需要在1秒内，开关1000次电源。</p>
+                            <p>显然不可能通过机械的方式来实现，驱动器都可以使用电子开关来驱动步进电机，控制板一样可以通过电压信号来控制步进电机驱动器。下图就是一个电子开关，我们设置为：</p>
+                            <p>1、频率：每秒开关8次</p>
+                            <p>2、脉冲数：一共开关200次</p>
+                            <p><img src="images/controltheory/image13.png" width="640" /></p>
+
+                            <p>下图就是开关对应的电压信号，控制步进驱动器指挥电机旋转。</p>
+                            <p><img src="images/controltheory/image14.png" width="640" /></p>
+                        </div>
+                    </div>
+
+                    <div class="buzhou" id="t4">
+                        <div class="xuhao">4</div>
+                        <p>CNC硬件控制板</p>
+                        <div style="float:left">
+                            <p>谁来给步进电机驱动器，发送控制信号呢？</p>
+                            <p>它就是CNC的大脑——硬件控制板，通常具有如下主要功能：</p>
+                            <p>1、通过电压信号，控制3个步进电机驱动器，间接指挥步进电机的旋转定位</p>
+                            <p>2、接受控制软件指令，把”X轴移动10mm”高级指令，转换为电压控制信号输出给步进电机驱动器</p>
+                            <p>3、与控制软件通信，反馈硬件设备当前运行的状态信息。同时响应软件控制</p>
+                            <p>-</p>
+                            <p>下图示意了蓝天科苑Mach3控制板，与步进驱动器的接线，它接受来自USB的指令，控制XYZ三个方向的步进电机运动。</p>
+                            <p><img src="images/controltheory/image15.png" width="640" /></p>
+
+                            <p>下图是使用控制板，驱动X轴电机的接线图：</p>
+                            <p><img src="images/controltheory/image16.png" width="640" /></p>
+
+                            <p>执行G0 X100指令时，控制板输出的电压开关信号：</p>
+                            <p><img src="images/controltheory/image17.png" width="640" /></p>
+
+                        </div>
+                    </div>
+
+                    <div class="buzhou" id="t5">
+                        <div class="xuhao">5</div>
+                        <p>CNC控制软件</p>
+                        <div style="float:left">
+                            <p>连接上Mach3软件</p>
+                            <p><img src="images/controltheory/image18.png" width="640" /></p>
+                            <p>在输入框中输入：G0 X10</p>
+                            <p>Mach3就会把这条指令，通过USB发送给CNC硬件控制板。</p>
+                            <p>CNC硬件控制板解析这条指令，换算成电压信号输出给步进电机驱动器，从而最终控制雕刻机的运行。</p>
+                            <p>例如：下面我们设置1个脉冲走1毫米，1秒走10个脉冲。</p>
+                            <p><img src="images/controltheory/image19.png" width="640" /></p>
+                            <p>设置步进驱动器200个脉冲旋转一圈，G0 X200刚好运动一圈，下图是运动时的截图。</p>
+                            <p><img src="images/controltheory/image20.png" width="640" /></p>
+                        </div>
+                    </div>
+                </div>
+                <!--右边其他人在看 块-->
+                <div class="jcnr-right">
+                    <div class="jcnr-right-top">
+                        <h3>教程目录</h3>
+                    </div>
+                    <div class="jcnr-right-bottom">
+                        <ul style="font-size: 14px;line-height: 40px;color: #666;">
+                            <!--只需要的对li进行修改或添加即可-->
+                            <li>1、步进原理</li>
+                            <li>2、步进电机驱动器</li>
+                            <li>3、电子开关</li>
+                            <li>4、CNC硬件控制板</li>
+                            <li>5、CNC控制软件</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!--返回顶部-->
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<!--页脚-->
+<iframe src="footer.html" width="100%" height="100%" scrolling="No" frameborder="0" id="footer"></iframe>
+</body>
+</html>
