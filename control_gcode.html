@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TinyCNC-在线教程</title>
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+    <!--页眉-->
+    <iframe src="header.html" width="100%" height="85" scrolling="No" frameborder="0" id="header"></iframe>
+
+    <!--
+        <div class="jcdh f-oh">
+            <div class="inner">
+                <div class="jcnav help-center-ul">
+                    <ul>
+                        <li class="jcli jcdq">
+                            <a href="jiaocheng.html">豹影帮助</a>
+                        </li>
+                        <li class="jcli-ipad jclast">
+                            <a href="ipadjiaocheng.html">运动分析大师帮助</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="jcnav jcnr-ul">
+                    <ul>
+                        <li class="jcli">
+                            <a href="shipinku_nr_01.html">视频库</a>
+                        </li>
+                        <li class="jcli">
+                            <a href="bofangqi_nr_01.html">播放器</a>
+                        </li>
+                        <li class="jcli jcdq">
+                            <a href="shexiang_nr_01.html">摄像</a>
+                        </li>
+                        <li class="jcli">
+                            <a href="fenxiqi_nr_01.html">分析器</a>
+                        </li>
+                        <li class="jcli">
+                            <a href="xianchangfenxi_nr_01.html">现场分析</a>
+                        </li>
+                        <li class="jcli">
+                            <a href="diejiaduibi_nr_01.html">叠加对比</a>
+                        </li>
+                        <li class="jcli jclast">
+                            <a href="dongzuofenjie_nr_01.html">动作分解</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    -->
+
+    <div class="jcnr f-oh">
+        <div class="inner">
+            <div class="jcnrkuai">
+                <!--左边教程内容块-->
+                <div class="jcnr-left">
+                    <h3>G语言</h3> <!--教程标题-->
+                    <div>
+                        <p>数控系统只能听懂G语言，使用这个语言才能指挥机器的运动。</p>
+                        <p>这里只介绍4个使用最频繁的指令，了解它就能看懂机器是如何运动了的。</p>
+                        <p>其它的指令，用到的时候在进行查找即可，详细资料参考百度网盘：</p>
+                        <p>-</p>
+                        <p>
+                            <a style="color:blue;font-size:24px" href="https://pan.baidu.com/s/1nF3oDF2iqsqecA1bz-zKzQ">百度云地址</a>
+                            <span style="font-size:18px">：https://pan.baidu.com/s/1nF3oDF2iqsqecA1bz-zKzQ</span>
+                        </p>
+                        <p style="color:red">网络爬虫经常导致分享文件失效，只能把提取吗放到QQ群里，网友见谅</p>
+                        <p style="font-size:18px">提取码：<span style="display:none">eni6</span>QQ群<span style="color:blue;font-size:24px">538472514</span>，公告中</p>
+                        <p>-</p>
+                    </div>
+                    <p style="clear:both"></p>
+
+                    <div class="buzhou" id="t1">
+                        <div class="xuhao">1</div>
+                        <p>G0快速定位：使用机器支持的最快速度，从线段的一点运行到另一点</p>
+                        <p>-</p>
+                        <p>例如：如下代码，表示从（x=0,y=0）点运动到(x=4,y=3)点</p>
+                        <div style="float:left">
+                            <p>G0 X0Y0</p>
+                            <p>G0 X4Y3</p>
+                            <img src="images/gcode/gcode.jpg" width="640" />
+                        </div>
+                    </div>
+
+                    <div class="buzhou" id="t2">
+                        <div class="xuhao">2</div>
+                        <p>G1直线切削：设置切割速度，以指定的速度进行直线切割</p>
+                        <p>-</p>
+                        <p>例如：如下代码，表示从（x=0,y=0）点，以800的切割速度移动到(x=4,y=3)点</p>
+                        <div style="float:left">
+                            <p>G0 X0Y0</p>
+                            <p>G1 X4Y3 F800</p>
+                            <img src="images/gcode/g1.jpg" width="640" />
+                        </div>
+                    </div>
+
+                    <div class="buzhou" id="t3">
+                        <div class="xuhao">3</div>
+                        <p>G2圆弧切削：切割一个圆弧</p>
+                        <p>-</p>
+                        <p>例如：如下代码，表示从（x=7,y=7）点，沿圆弧移动到(x=10,y=16)点</p>
+                        <div style="float:left">
+                            <p>G0 X7Y7</p>
+                            <p>G2 X10Y16 i3 j4</p>
+                            <img src="images/gcode/g2.jpg" width="640" />
+                            <p>-</p>
+                            <p>G0 X7Y7：表示当前位置是x=7,y=7</p>
+                            <p>G2 X10Y16 i3 j4：表示顺时针旋转到x=10、y=16。i3 j4表示圆心点在当前位置+(3,4)，即在x=10，y=11处</p>
+                            <p>-</p>
+                        </div>>
+                    </div>
+
+                    <div class="buzhou" id="t4">
+                        <div class="xuhao">4</div>
+                        <p>G12圆形切削：切割一个完整的圆</p>
+                        <p>-</p>
+                        <p>例如：如下代码，表示以（x=5,y=5）点为圆心，半径=3，绘制一个圆</p>
+                        <div style="float:left">
+                            <p>G0 X5Y5</p>
+                            <p>G12 i3：向x轴移动3个单位，然后绕圆心旋转一圈，在回到圆心</p>
+                        </div>
+                        <p>-</p>
+                        <p>把这4个指令记住，基本就能看懂G代码。没有碰到的指令，选择性忽略，也不影响对雕刻刀路的理解。</p>
+                        <p>如果想了解每一条指令，参考百度网盘的资料</p>
+                    </div>
+
+                    <div style="clear:both"> -</div>
+                    <div class="buzhou" id="t5">
+                        <div class="xuhao">5</div>
+                        <p>G代码范例：绘制正方形</p>
+                        <p>下面我们就使用上面几条指令，来绘制一个正方形。后面的电控教程，会使用这个G代码</p>
+                        <div style="float:left">
+                            <p>G0 X0Y0Z2</p>
+                            <p>G1 X0Y0Z0 F800</p>
+                            <p>G1 X50Y0</p>
+                            <p>G1 X50Y50</p>
+                            <p>G1 X0Y50</p>
+                            <p>G1 X0Y0</p>
+                            <p>G0 X-10Y10Z15</p>
+                            <p>G0 X-10Y10Z10</p>
+                            <p>-</p>
+                            <div>
+                                <a href="https://www.bilibili.com/video/BV1av411z7AT" target="_blank">
+                                    <p style="color:blue">点击播放演示视频：</p>
+                                    <img src="images/gcode/example.jpg" />
+                                </a>
+                            </div>
+                        </div>
+                        <p>-</p>
+
+                    </div>
+                </div>
+                <!--右边其他人在看 块-->
+                <div class="jcnr-right">
+                    <div class="jcnr-right-top">
+                        <h3>教程目录</h3>
+                    </div>
+                    <div class="jcnr-right-bottom">
+                        <ul style="font-size: 14px;line-height: 40px;color: #666;">
+                            <!--只需要的对li进行修改或添加即可-->
+                            <li>1、G0快速定位</li>
+                            <li>2、G1直线切削</li>
+                            <li>3、G2圆弧切削</li>
+                            <li>4、G12圆形切削</li>
+                            <li>5、绘制正方形</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!--返回顶部-->
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<!--页脚-->
+<iframe src="footer.html" width="100%" height="100%" scrolling="No" frameborder="0" id="footer"></iframe>
+</body>
+</html>
